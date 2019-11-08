@@ -1,6 +1,6 @@
 using System;
 
-namespace DNDApi.Models
+namespace DNDApi.Models.Character
 {
     public class Session
     {

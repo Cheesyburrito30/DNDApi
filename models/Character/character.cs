@@ -1,7 +1,8 @@
 using System;
 using System.Collections.Generic;
+using DNDApi.Models.Actions;
 
-namespace DNDApi.Models
+namespace DNDApi.Models.Character
 {
     public class Character
     {
@@ -14,17 +15,16 @@ namespace DNDApi.Models
         public int ArmorClass { get; set; }
         public int HitPoints { get; set; }
         public string HitDice { get; set; }
-        public Speed Speed { get; set; }
+        public Speed Speed { get; set; } = new Speed();
         public bool Hover { get; set; }
-        public Ability Abilities { get; set; }
-        public Ability Saves { get; set; }
-        public Skill Skills { get; set; }
+        public Ability Abilities { get; set; } = new Ability();
+        public Ability Saves { get; set; } = new Ability();
+        public Skill Skills { get; set; } = new Skill();
         public string Senses { get; set; }
         public string Languages { get; set; }
-        public ICollection<Action> Actions { get; set; }
-        public ICollection<Action> Reactions { get; set; }
-        
-        public enum AbilityType 
+        public ICollection<Actions.Action> Actions { get; set; }
+
+        public enum AbilityType
         {
             Strength,
             Dexterity,

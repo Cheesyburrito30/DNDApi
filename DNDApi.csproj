@@ -15,6 +15,16 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="3.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.0.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.0.0" />
+    <PackageReference Include="Newtonsoft.json" Version="12.0.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="models\Actions\" />
+    <Folder Include="models\Character\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Migrations\CharacterContextModelSnapshot.cs" />
+    <Compile Remove="Migrations\20191108004318_DNDmigration.cs" />
+    <Compile Remove="Migrations\20191108004318_DNDmigration.Designer.cs" />
+  </ItemGroup>
 </Project>
